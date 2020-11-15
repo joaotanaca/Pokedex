@@ -28,5 +28,8 @@ module.exports = {
     'comma-dangle': 'off',
     'no-plusplus': 'off',
     'import/prefer-default-export': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'operator-linebreak': 'off',
+    'no-loop-func': 'off',
   },
 };
