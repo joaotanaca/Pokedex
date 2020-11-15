@@ -4,7 +4,7 @@ import { SimplePokemon } from '../../interfaces/pokemons';
 import { StatesRedux } from '../../interfaces/redux';
 import api from '../../services/api';
 
-// import { Container } from './styles';
+import { ContainerBottom } from './styles';
 
 const PageBottom = React.memo(
   ({
@@ -19,7 +19,7 @@ const PageBottom = React.memo(
     } = useSelector((state: StatesRedux) => state);
     const [initial] = initialFinal ?? [1, 10];
     return (
-      <>
+      <ContainerBottom>
         {pokemons.map((pokemon: SimplePokemon, index) => (
           <button
             key={pokemon.name}
@@ -37,7 +37,7 @@ const PageBottom = React.memo(
             <p>{initial + index}</p>
           </button>
         ))}
-      </>
+      </ContainerBottom>
     );
   }
 );
